@@ -1,0 +1,108 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+  background-color: hsl(0, 0%, 95%);
+  font-size: 15px;
+}
+.container{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  -webkit-transform: translate(-50% , -50%);
+  -moz-transform: translate(-50% , -50%);
+  -ms-transform: translate(-50% , -50%);
+  -o-transform: translate(-50% , -50%);
+  height: 460px;
+  width: 900px;
+  
+}
+h1{
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  color: hsl(0, 0%, 95%);
+  margin: 30px 0;
+  font-size: 35px;
+}
+p{
+  color: hsla(0, 0%, 100%, 0.75);
+  margin: 20px 0 60px;
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.6;
+}
+.container > div{
+  padding: 40px;
+  width: 300px;
+}
+.container > :nth-child(1){
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.container > :nth-child(2){
+  background-color: hsl(184, 100%, 22%)
+}
+.container > :nth-child(3){
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.container div button{
+  width: 150px;
+  padding: 15px;
+  border:3px solid white;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container > :nth-child(1) button{
+  color: hsl(31, 77%, 52%);
+}
+.container > :nth-child(2) button{
+  color: hsl(184, 100%, 22%);
+}
+.container > :nth-child(3) button{
+  color: hsl(179, 100%, 13%);
+}
+.container div button:hover{
+  background-color: transparent;
+  color: white;
+}
+/* mobile screen */
+@media (max-width:375px) {
+  .container{
+    display: flex;
+    flex-wrap:wrap ;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 10px auto;
+    transform:translate(0, 0) ;
+    height: 1380px;
+    width: 300px;
+    -webkit-transform:translate(0, 0) ;
+    -moz-transform:translate(0, 0) ;
+    -ms-transform:translate(0, 0) ;
+    -o-transform:translate(0, 0) ;
+}
+  .container > div{
+    height: 460px;
+    width: 100%;
+  }
+  .container > :nth-child(1){
+    border-top-right-radius:10px ;
+    border-bottom-left-radius:0 ;
+  }
+  .container > :nth-child(3){
+    border-top-right-radius:0px ;
+    border-bottom-left-radius:10px ;
+  }
+
+}
